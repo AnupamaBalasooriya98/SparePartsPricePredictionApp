@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.sliit.smartserviceassistant.map.MapsActivity;
-
 public class DisplayPrice extends AppCompatActivity {
     private Button btn_launch;
 

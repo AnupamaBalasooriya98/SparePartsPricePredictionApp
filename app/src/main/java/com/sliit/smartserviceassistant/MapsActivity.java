@@ -1,4 +1,4 @@
-package com.sliit.smartserviceassistant.map;
+package com.sliit.smartserviceassistant;
 
 import androidx.fragment.app.FragmentActivity;
 
