@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Smart Vehicle Assistant</string>
+    <string name="title_activity_near_by_spare_parts_shops_google_maps">Map</string>
+    <string name="title_activity_near_by_shops_maps">Map</string>
+</resources>
