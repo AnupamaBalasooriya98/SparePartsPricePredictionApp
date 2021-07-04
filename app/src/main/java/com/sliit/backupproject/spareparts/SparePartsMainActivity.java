@@ -14,9 +14,9 @@ import com.sliit.backupproject.R;
 public class SparePartsMainActivity extends AppCompatActivity {
     private Button btn_search;
 
-    private Spinner spin_vehicle_model;
-    private Spinner spin_vehicle_type;
-    private Spinner spin_part_type;
+    public Spinner spin_vehicle_model;
+    public Spinner spin_vehicle_type;
+    public Spinner spin_part_type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +68,6 @@ public class SparePartsMainActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_item, arraySpinner_part_type);
         adapter_part_type.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         s3.setAdapter(adapter_part_type);
-
 
     }
 
