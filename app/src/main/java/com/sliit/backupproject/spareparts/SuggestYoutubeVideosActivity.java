@@ -23,7 +23,7 @@ public class SuggestYoutubeVideosActivity extends AppCompatActivity {
         youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
             @Override
             public void onReady(@NonNull YouTubePlayer youTubePlayer) {
-                String videoId = "p3CcfIjycBA";
+                String videoId = "JWvU8TDug2c";
                 youTubePlayer.loadVideo(videoId, 0);
             }
         });
