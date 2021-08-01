@@ -34,6 +34,8 @@ public class SparePartsMainActivity extends AppCompatActivity {
         adapter_model.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         s.setAdapter(adapter_model);
 
+
+
         // Select vehicle type Spinner
         spin_vehicle_type = findViewById(R.id.spin_vehicle_type);
         String[] arraySpinner_type = new String[] {
