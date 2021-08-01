@@ -23,16 +23,6 @@ public class SparePartsMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spare_parts_main);
 
-        // Search button
-        btn_search = findViewById(R.id.btn_search);
-        btn_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SparePartsMainActivity.this, DisplayPriceActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // Select vehicle model Spinner
         spin_vehicle_model = findViewById(R.id.spin_vehicle_model);
         String[] arraySpinner_model = new String[] {
@@ -68,6 +58,23 @@ public class SparePartsMainActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_item, arraySpinner_part_type);
         adapter_part_type.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         s3.setAdapter(adapter_part_type);
+
+        // Search button
+        btn_search = findViewById(R.id.btn_search);
+        btn_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String model = String.valueOf(spin_vehicle_model.getSelectedItem());
+                String type = String.valueOf(spin_vehicle_type.getSelectedItem());
+                String part = String.valueOf(spin_part_type.getSelectedItem());
+
+                Intent intent = new Intent(SparePartsMainActivity.this, DisplayPriceActivity.class);
+                intent.putExtra("key_model", model);
+                intent.putExtra("key_type", type);
+                intent.putExtra("key_part", part);
+                startActivity(intent);
+            }
+        });
 
     }
 
