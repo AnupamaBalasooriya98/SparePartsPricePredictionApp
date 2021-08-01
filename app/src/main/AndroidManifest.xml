@@ -41,7 +41,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".spareparts.SparePartsMainActivity" />
-        <activity android:name=".spareparts.SuggestYoutubeVideosActivity" />
         <activity
             android:name=".spareparts.NearBySparePartsShopsGoogleMapsActivity"
             android:label="@string/title_activity_near_by_spare_parts_shops_google_maps" />

@@ -10,9 +10,7 @@ import android.widget.Button;
 import com.sliit.backupproject.insurance.InsuranceMainActivity;
 import com.sliit.backupproject.maintenancedetails.MaintenanceMainActivity;
 import com.sliit.backupproject.repairmethods.RepairMethodsMainActivity;
-import com.sliit.backupproject.spareparts.DisplayPriceActivity;
 import com.sliit.backupproject.spareparts.SparePartsMainActivity;
-import com.sliit.backupproject.spareparts.SuggestYoutubeVideosActivity;
 
 public class MainActivity extends AppCompatActivity {
 
