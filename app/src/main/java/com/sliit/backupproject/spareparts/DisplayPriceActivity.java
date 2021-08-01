@@ -22,6 +22,7 @@ public class DisplayPriceActivity extends AppCompatActivity {
     private String model;
     private String type;
     private String part;
+    private String year;
 
     private TextView topic;
 
@@ -44,6 +45,7 @@ public class DisplayPriceActivity extends AppCompatActivity {
         model = getIntent().getStringExtra("key_model");
         type = getIntent().getStringExtra("key_type");
         part = getIntent().getStringExtra("key_part");
+        year = getIntent().getStringExtra("key_year");
 
         // Youtube videos button
         btn_videos = findViewById(R.id.btn_launch_videos);
@@ -56,9 +58,7 @@ public class DisplayPriceActivity extends AppCompatActivity {
         });
 
         topic = findViewById(R.id.txt_spare_part_name);
-        topic.setText(model + " " + type + " " + part,
-                TextView.BufferType.EDITABLE);
-//        topic.setText("Toyota Corolla Headlight");
+        topic.setText(model + " " + type + " " + part + " for the year of " + year);
 
     }
 

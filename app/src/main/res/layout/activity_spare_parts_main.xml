@@ -89,6 +89,26 @@
                 android:layout_height="40dp">
             </Spinner>
 
+            <!-- Select the year -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_year"
+                android:text="For the year of:"
+                android:textSize="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/spin_spare_part">
+            </TextView>
+
+            <Spinner
+                android:id="@+id/spin_year"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/txt_year"
+                android:layout_alignParentRight="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+            </Spinner>
+
             <!-- Search button -->
             <Button
                 android:id="@+id/btn_search"
@@ -96,7 +116,7 @@
                 android:textSize="20dp"
                 android:layout_marginTop="60dp"
                 android:layout_marginBottom="50dp"
-                android:layout_below="@id/spin_spare_part"
+                android:layout_below="@id/spin_year"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             </Button>
