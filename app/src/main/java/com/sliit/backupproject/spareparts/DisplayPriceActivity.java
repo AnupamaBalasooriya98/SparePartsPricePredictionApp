@@ -1,6 +1,7 @@
 package com.sliit.backupproject.spareparts;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,24 +40,29 @@ public class DisplayPriceActivity extends AppCompatActivity {
             }
         });
 
+        // Ged vehicle details from the main activity interface
+        model = String.valueOf(sparePartsMainActivity.spin_vehicle_model.getSelectedItemPosition());
+        type = String.valueOf(sparePartsMainActivity.spin_vehicle_type.getSelectedItemPosition());
+        part = String.valueOf(sparePartsMainActivity.spin_part_type.getSelectedItemPosition());
+
         // Youtube videos button
         btn_videos = findViewById(R.id.btn_launch_videos);
         btn_videos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DisplayPriceActivity.this, SuggestYoutubeVideosActivity.class);
-                startActivity(intent);
+                getUrl("https://www.youtube.com/results?search_query=" +
+                                model + "+" + type + "+" + part + "+replacement");
             }
         });
-
-        // Set topic according to the selected details
-//        model = String.valueOf(sparePartsMainActivity.spin_vehicle_model.getSelectedItemPosition());
-//        type = String.valueOf(sparePartsMainActivity.spin_vehicle_type.getSelectedItemPosition());
-//        part = String.valueOf(sparePartsMainActivity.spin_part_type.getSelectedItemPosition());
 
         topic = findViewById(R.id.txt_spare_part_name);
 //        topic.setText(model, TextView.BufferType.EDITABLE);
         topic.setText("Toyota Corolla Headlight");
 
+    }
+
+    private void getUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
 }
