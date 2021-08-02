@@ -19,6 +19,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_topic"
+                android:textSize="30dp"
+                android:text="Nearby Spare Parts Stores"
+                android:textColor="@color/black"
+                android:textAlignment="center">
+            </TextView>
+
         </RelativeLayout>
 
     </LinearLayout>
