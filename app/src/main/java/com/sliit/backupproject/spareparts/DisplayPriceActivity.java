@@ -36,8 +36,8 @@ public class DisplayPriceActivity extends AppCompatActivity {
         btn_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getUrl("https://www.google.lk/maps/search/spare+parts+stores/" +
-                        "@6.1980526,80.025728,12z/data=!4m5!2m4!5m2!4e8!10e2!6e6");
+                Intent intent = new Intent(DisplayPriceActivity.this, StoresListActivity.class);
+                startActivity(intent);
             }
         });
 
