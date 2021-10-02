@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +20,7 @@ import com.sliit.backupproject.R;
 public class StoresListActivity extends AppCompatActivity {
 
     Button btn_enter;
-    TextView textView;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class StoresListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stores_list);
 
         btn_enter = findViewById(R.id.btn_enter);
-        textView = findViewById(R.id.txt_topic);
+        listView = findViewById(R.id.list_stores);
 
         btn_enter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,16 +48,13 @@ public class StoresListActivity extends AppCompatActivity {
                         }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(StoresListActivity.this, "Error occured!",
+                        Toast.makeText(StoresListActivity.this, "Error captured!",
                                 Toast.LENGTH_LONG).show();
                     }
                 });
 
                 // Add the request to the RequestQueue.
                 queue.add(stringRequest);
-
-//                Toast.makeText(StoresListActivity.this,
-//                        "Viewing nearest, best spare parts shops", Toast.LENGTH_LONG).show();
             }
         });
 
