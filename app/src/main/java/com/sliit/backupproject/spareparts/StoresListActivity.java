@@ -35,7 +35,7 @@ public class StoresListActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Instantiate the RequestQueue.
                 RequestQueue queue = Volley.newRequestQueue(StoresListActivity.this);
-                String url ="https://www.google.com";
+                String url ="C://Users//Anupama//Desktop//google.json";
 
                 // Request a string response from the provided URL.
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
