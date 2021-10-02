@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
 import com.chaquo.python.android.AndroidPlatform;
 import com.sliit.backupproject.insurance.InsuranceMainActivity;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             Python.start(new AndroidPlatform(this));
 
         Python py = Python.getInstance();
-        Python pyobj = py.getModule("");    // python file name
+        PyObject pyobj = py.getModule("toyota_corolla");    // python file name
 
         // Insurance button
         btn_insurance = findViewById(R.id.btn_insurance);
