@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.chaquo.python.Python;
-import com.chaquo.python.android.AndroidPlatform;
 import com.sliit.backupproject.insurance.InsuranceMainActivity;
 import com.sliit.backupproject.maintenancedetails.MaintenanceMainActivity;
 import com.sliit.backupproject.repairmethods.RepairMethodsMainActivity;
@@ -25,13 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // Python integration
-        if (!Python.isStarted())
-            Python.start(new AndroidPlatform(this));
-
-        Python py = Python.getInstance();
-        Python pyobj = py.getModule("");    // python file name
 
         // Insurance button
         btn_insurance = findViewById(R.id.btn_insurance);
