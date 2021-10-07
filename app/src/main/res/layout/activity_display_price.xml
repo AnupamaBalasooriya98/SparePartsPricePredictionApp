@@ -51,34 +51,13 @@
                 android:layout_height="wrap_content">
             </TextView>
 
-            <!-- Display average replacement cost -->
-            <TextView
-                android:text="Average replacement\ncost:"
-                android:textSize="20dp"
-                android:layout_marginTop="50dp"
-                android:layout_below="@id/txt_avg_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </TextView>
-
-            <TextView
-                android:id="@+id/txt_avg_replacement_cost"
-                android:text="- cost -"
-                android:textSize="20dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="50dp"
-                android:layout_below="@id/txt_avg_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </TextView>
-
             <!-- Display stores in google map -->
             <TextView
                 android:id="@+id/txt_stores"
                 android:text="Available stores nearby:"
                 android:textSize="20dp"
                 android:layout_marginTop="70dp"
-                android:layout_below="@id/txt_avg_replacement_cost"
+                android:layout_below="@id/txt_avg_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
             </TextView>

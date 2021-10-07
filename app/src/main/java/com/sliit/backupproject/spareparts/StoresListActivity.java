@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -35,7 +34,7 @@ public class StoresListActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Instantiate the RequestQueue.
                 RequestQueue queue = Volley.newRequestQueue(StoresListActivity.this);
-                String url ="C://Users//Anupama//Desktop//google.json";
+                String url ="https://sites.google.com/view/spare-parts-shops-data";
 
                 // Request a string response from the provided URL.
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -48,13 +47,13 @@ public class StoresListActivity extends AppCompatActivity {
                         }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(StoresListActivity.this, "Error captured!",
-                                Toast.LENGTH_LONG).show();
+                        Toast.makeText(StoresListActivity.this, "Error captured!", Toast.LENGTH_SHORT).show();
                     }
                 });
 
                 // Add the request to the RequestQueue.
                 queue.add(stringRequest);
+
             }
         });
 

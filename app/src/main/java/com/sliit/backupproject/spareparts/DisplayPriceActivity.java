@@ -18,6 +18,7 @@ public class DisplayPriceActivity extends AppCompatActivity {
 
     private Button btn_map;
     private Button btn_videos;
+    private TextView avgPrice;
 
     private String model;
     private String type;
@@ -59,6 +60,9 @@ public class DisplayPriceActivity extends AppCompatActivity {
 
         topic = findViewById(R.id.txt_spare_part_name);
         topic.setText(model + " " + type + " " + part + " for the year of " + year);
+
+        avgPrice = findViewById(R.id.txt_avg_price);
+        avgPrice.setText("35 375.00");
 
     }
 
