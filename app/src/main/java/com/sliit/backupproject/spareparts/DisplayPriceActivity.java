@@ -45,7 +45,7 @@ public class DisplayPriceActivity extends AppCompatActivity {
         btn_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DisplayPriceActivity.this, StoresListActivity.class);
+                Intent intent = new Intent(DisplayPriceActivity.this, MapsActivity.class);
                 startActivity(intent);
             }
         });

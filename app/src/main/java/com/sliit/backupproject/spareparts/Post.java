@@ -6,7 +6,7 @@ public class Post {
 
     private float price;
 
-    @SerializedName("body")
+    @SerializedName("prices")
     private String text;
 
     public float getPrice() {
