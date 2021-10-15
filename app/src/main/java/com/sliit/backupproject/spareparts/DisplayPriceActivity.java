@@ -70,40 +70,41 @@ public class DisplayPriceActivity extends AppCompatActivity {
         topic.setText(model + " " + type + " " + part + " for the year of " + year);
 
         avgPrice = findViewById(R.id.txt_avg_price);
+        avgPrice.setText("Rs. 35");
 
         // Predict price for the requested part
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://127.0.0.1:8000/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
-
-        Call<List<Post>> call = jsonPlaceHolderApi.getPosts();
-
-        call.enqueue(new Callback<List<Post>>() {
-            @Override
-            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
-                if(!response.isSuccessful()) {
-                    avgPrice.setText("Rs. " + response.code());
-                    return;
-                }
-
-                List<Post> posts = response.body();
-
-                for (Post post : posts) {
-                    String content = "";
-                    content += post.getPrice();
-
-                    avgPrice.append(content);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Post>> call, Throwable t) {
-                avgPrice.setText(t.getMessage());
-            }
-        });
+//        Retrofit retrofit = new Retrofit.Builder()
+//                .baseUrl("http://127.0.0.1:8000/")
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//
+//        JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
+//
+//        Call<List<Post>> call = jsonPlaceHolderApi.getPosts();
+//
+//        call.enqueue(new Callback<List<Post>>() {
+//            @Override
+//            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
+//                if(!response.isSuccessful()) {
+//                    avgPrice.setText("Rs. " + response.code());
+//                    return;
+//                }
+//
+//                List<Post> posts = response.body();
+//
+//                for (Post post : posts) {
+//                    String content = "";
+//                    content += post.getPrice();
+//
+//                    avgPrice.append(content);
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<List<Post>> call, Throwable t) {
+//                avgPrice.setText(t.getMessage());
+//            }
+//        });
 
     }
 
