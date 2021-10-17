@@ -70,7 +70,7 @@ public class DisplayPriceActivity extends AppCompatActivity {
         topic.setText(model + " " + type + " " + part + " for the year of " + year);
 
         avgPrice = findViewById(R.id.txt_avg_price);
-        avgPrice.setText("Rs. 35");
+        avgPrice.setText("Rs. 35375");
 
         // Predict price for the requested part
 //        Retrofit retrofit = new Retrofit.Builder()
