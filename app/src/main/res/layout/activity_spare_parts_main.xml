@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".spareparts.SparePartsMainActivity">
+    tools:context=".spareparts.SparePartsMainActivity"
+    android:background="#1DB7AE">
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,6 +19,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/parts_img"
+                android:layout_centerHorizontal="true">
+            </ImageView>
+
             <!-- Topic -->
             <TextView
                 android:id="@+id/txt_topic"
@@ -25,8 +34,10 @@
                 android:textSize="30dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView">
             </TextView>
 
             <!-- Vehicle model input -->
@@ -37,7 +48,8 @@
                 android:text="Vehicle model:"
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColor="@color/black">
             </TextView>
 
             <Spinner
@@ -46,7 +58,8 @@
                 android:layout_below="@id/txt_vehicle_model"
                 android:layout_alignParentRight="true"
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="40dp"
+                android:textColor="@color/black">
             </Spinner>
 
             <!-- Vehicle type input -->
@@ -57,7 +70,8 @@
                 android:text="Vehicle type:"
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColor="@color/black">
             </TextView>
 
             <Spinner
@@ -66,7 +80,8 @@
                 android:layout_below="@id/txt_vehicle_type"
                 android:layout_alignParentRight="true"
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="40dp"
+                android:textColor="@color/black">
             </Spinner>
 
             <!-- Spare part type input -->
@@ -77,7 +92,8 @@
                 android:text="Spare part type:"
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:textColor="@color/black">
             </TextView>
 
             <Spinner
@@ -86,7 +102,8 @@
                 android:layout_below="@id/txt_spare_part"
                 android:layout_alignParentRight="true"
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="40dp"
+                android:textColor="@color/black">
             </Spinner>
 
             <!-- Select the year -->
@@ -97,7 +114,8 @@
                 android:text="For the year of:"
                 android:textSize="20dp"
                 android:layout_marginTop="40dp"
-                android:layout_below="@+id/spin_spare_part">
+                android:layout_below="@+id/spin_spare_part"
+                android:textColor="@color/black">
             </TextView>
 
             <Spinner
@@ -106,7 +124,8 @@
                 android:layout_below="@id/txt_year"
                 android:layout_alignParentRight="true"
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="40dp"
+                android:textColor="@color/black">
             </Spinner>
 
             <!-- Search button -->
