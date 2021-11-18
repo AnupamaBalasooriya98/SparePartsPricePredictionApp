@@ -47,12 +47,12 @@ public class DisplayPriceActivity extends AppCompatActivity {
         part = getIntent().getStringExtra("key_part");
         year = getIntent().getStringExtra("key_year");
 
-        Intent intent = new Intent(DisplayPriceActivity.this, Predictor.class);
-        intent.putExtra("key_model", model);
-        intent.putExtra("key_type", type);
-        intent.putExtra("key_part", part);
-        intent.putExtra("key_year", year);
-        startActivity(intent);
+//        Intent intent = new Intent(DisplayPriceActivity.this, Predictor.class);
+//        intent.putExtra("key_model", model);
+//        intent.putExtra("key_type", type);
+//        intent.putExtra("key_part", part);
+//        intent.putExtra("key_year", year);
+//        startActivity(intent);
 
         // Youtube videos button
         btn_videos = findViewById(R.id.btn_launch_videos);
