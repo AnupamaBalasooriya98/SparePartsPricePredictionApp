@@ -5,20 +5,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.sliit.backupproject.R;
-
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class DisplayPriceActivity extends AppCompatActivity {
 
@@ -56,6 +47,13 @@ public class DisplayPriceActivity extends AppCompatActivity {
         part = getIntent().getStringExtra("key_part");
         year = getIntent().getStringExtra("key_year");
 
+        Intent intent = new Intent(DisplayPriceActivity.this, Predictor.class);
+        intent.putExtra("key_model", model);
+        intent.putExtra("key_type", type);
+        intent.putExtra("key_part", part);
+        intent.putExtra("key_year", year);
+        startActivity(intent);
+
         // Youtube videos button
         btn_videos = findViewById(R.id.btn_launch_videos);
         btn_videos.setOnClickListener(new View.OnClickListener() {
@@ -70,41 +68,8 @@ public class DisplayPriceActivity extends AppCompatActivity {
         topic.setText(model + " " + type + " " + part + " for the year of " + year);
 
         avgPrice = findViewById(R.id.txt_avg_price);
-        avgPrice.setText("Rs. 35375");
-
-        // Predict price for the requested part
-//        Retrofit retrofit = new Retrofit.Builder()
-//                .baseUrl("http://127.0.0.1:8000/")
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build();
-//
-//        JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
-//
-//        Call<List<Post>> call = jsonPlaceHolderApi.getPosts();
-//
-//        call.enqueue(new Callback<List<Post>>() {
-//            @Override
-//            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
-//                if(!response.isSuccessful()) {
-//                    avgPrice.setText("Rs. " + response.code());
-//                    return;
-//                }
-//
-//                List<Post> posts = response.body();
-//
-//                for (Post post : posts) {
-//                    String content = "";
-//                    content += post.getPrice();
-//
-//                    avgPrice.append(content);
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<Post>> call, Throwable t) {
-//                avgPrice.setText(t.getMessage());
-//            }
-//        });
+//        avgPrice.setText("Rs. 35375");
+//        Call method from Predictor class
 
     }
 
