@@ -18,14 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/parts_img"
-                android:layout_centerHorizontal="true">
-            </ImageView>
-
             <!-- Topic -->
             <TextView
                 android:id="@+id/txt_topic"
@@ -33,17 +25,26 @@
                 android:textSize="30dp"
                 android:textStyle="bold"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="#1589FF"
+                android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView">
+                android:layout_height="wrap_content">
             </TextView>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/parts_img"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/txt_topic">
+            </ImageView>
 
             <!-- Vehicle model input -->
             <TextView
                 android:id="@+id/txt_vehicle_model"
-                android:layout_marginTop="60dp"
-                android:layout_below="@+id/txt_topic"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/imageView"
                 android:text="Vehicle model:"
                 android:textSize="20dp"
                 android:layout_width="wrap_content"
