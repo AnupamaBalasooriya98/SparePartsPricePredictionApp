@@ -22,49 +22,71 @@
             <!-- Display topic -->
             <TextView
                 android:id="@+id/txt_topic"
-                android:textSize="25dp"
+                android:textSize="30dp"
                 android:textStyle="bold"
-                android:text="SMART VEHICLE ASSISTANT"
-                android:textAlignment="center"
+                android:text="WELCOME TO THE VEHICLE ASSISTANT"
+                android:gravity="center"
+                android:textColor="#1589FF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/img_home"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/main_img"
+                android:layout_marginTop="25dp"
+                android:layout_below="@id/txt_topic"
+                android:layout_centerHorizontal="true" />
 
             <!-- Function buttons -->
             <Button
                 android:id="@+id/btn_insurance"
-                android:text="INSURANCE"
-                android:textSize="20dp"
-                android:layout_below="@id/txt_topic"
-                android:layout_marginTop="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:text="Breakdown Solutions"
+                android:textSize="18dp"
+                android:layout_below="@id/img_home"
+                android:layout_marginTop="25dp"
+                android:layout_width="275dp"
+                android:layout_height="75dp"
+                android:backgroundTint="#1589FF"
+                android:textAllCaps="false"
+                android:layout_centerInParent="true"/>
 
             <Button
                 android:id="@+id/btn_maintenance"
-                android:text="MAINTENANCE"
-                android:textSize="20dp"
+                android:text="Maintenance"
+                android:textSize="18dp"
                 android:layout_below="@id/btn_insurance"
-                android:layout_marginTop="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/btn_repair_methods"
-                android:text="REPAIR METHODS"
-                android:textSize="20dp"
-                android:layout_below="@id/btn_maintenance"
-                android:layout_marginTop="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_marginTop="10dp"
+                android:layout_width="275dp"
+                android:layout_height="75dp"
+                android:backgroundTint="#1589FF"
+                android:textAllCaps="false"
+                android:layout_centerInParent="true" />
 
             <Button
                 android:id="@+id/btn_spare_parts"
-                android:text="SPARE PARTS"
-                android:textSize="20dp"
-                android:layout_below="@id/btn_repair_methods"
-                android:layout_marginTop="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_width="275dp"
+                android:layout_height="75dp"
+                android:layout_below="@id/btn_maintenance"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#1589FF"
+                android:text="Spare Parts"
+                android:textAllCaps="false"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btn_repair_methods"
+                android:layout_width="275dp"
+                android:layout_height="75dp"
+                android:layout_below="@id/btn_spare_parts"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#1589FF"
+                android:text="Insurance"
+                android:textAllCaps="false"
+                android:textSize="18dp" />
 
         </RelativeLayout>
 
